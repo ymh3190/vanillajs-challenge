@@ -107,9 +107,8 @@ const displayClock = () => {
   const seconds = toPadStart(now.getSeconds());
 
   const clock = realtimeClock.querySelector("span:first-child");
-  clock.innerHTML = `${
-    hours >= 12 ? "오후" : "오전"
-  } ${hours}:${minutes}:${seconds}`;
+  clock.innerHTML = `${hours >= 12 ? "오후" : "오전"
+    } ${hours}:${minutes}:${seconds}`;
   const date = realtimeClock.querySelector("span:last-child");
   date.innerHTML = `${years}-${months + 1}-${dates}`;
 };
@@ -142,8 +141,7 @@ geo.getCurrentPosition(geoSuccess, geoError);
 // 4. 랜덤 배경 이미지
 document.body.setAttribute(
   "background",
-  // `bg/${img[Math.floor(Math.random() * img.length)]}`
-  `bg/a.jpeg`
+  `bg/${img[Math.floor(Math.random() * img.length)]}`
 );
 
 // 3. 로컬 스토리지를 사용한 투두리스트
